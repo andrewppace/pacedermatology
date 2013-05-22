@@ -7,8 +7,11 @@
     %div{class: "container"}
       %div{class: "row"}
         %p{class: "pull-right"}
-          Call Now: &nbsp;
+          Call us at
           =link_to "(253) 572-2842", "tel:253-572-2842"
+          to 
+          =link_to "book an appointment", "http://zocdoc.com/practice/pace-dermatology-associates-11032"
+          today
       %div{class: "row"}
         %p{class: "pull-right"}
           =link_to "http://twitter.com/akpaceskindoc" do
@@ -34,13 +37,26 @@
                   %b{class: "caret"}
                 %ul{class: "dropdown-menu"}
                   %li
-                    =link_to "Mission", root_path
+                    =link_to "Our Mission", about_mission_path
                   %li
-                    =link_to "The Associates", root_path
+                    =link_to "Our Associates", about_associates_path
                   %li
-                    =link_to "The Providers", pages_about_path
-              %li
-                =link_to "Services", pages_services_path
+                    =link_to "Our Providers", about_providers_path
+              %li{class: "dropdown"}
+                %a{href: "#", class: "dropdown-toggle", "data-toggle" => "dropdown"}
+                  Services
+                  %b{class: "caret"}
+                %ul{class: "dropdown-menu"}
+                  %li
+                    =link_to "Insurance Coverage", services_insurance_path
+                  %li
+                    =link_to "Medical", services_medical_path
+                  %li
+                    =link_to "Surgical", services_surgical_path
+                  %li
+                    =link_to "Cosmetic", services_cosmetic_path
+                  %li
+                    =link_to "Lasers", services_lasers_path
               %li
                 =link_to "Art", pages_art_path
               %li
@@ -54,5 +70,10 @@
               %li
                 =link_to "Products", pages_contact_path
       =yield
+      %div{class: "row"}
+        %div{class: "span4"}
+          %ul{class: "nav nav-list"}
+            %li{class: "nav-header"} 
+              About
     =javascript_include_tag "http://code.jquery.com/jquery.js"
     =javascript_include_tag "application"

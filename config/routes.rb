@@ -1,5 +1,15 @@
 Pacedermatology::Application.routes.draw do
   
+  get "services/medical"
+  get "services/surgical"
+  get "services/cosmetic"
+  get "services/lasers"
+  get "services/insurance"
+
+  get "about/mission"
+  get "about/associates"
+  get "about/providers"
+
   get "pages/about"
   get "pages/contact"
   get "pages/art"
