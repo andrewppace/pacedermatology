@@ -1,0 +1,58 @@
+!!! 5
+%html
+  %head
+    %title Pace Dermatology - #{@page_title || "Come in today"}
+    =stylesheet_link_tag "application"
+  %body
+    %div{class: "container"}
+      %div{class: "row"}
+        %p{class: "pull-right"}
+          Call Now: &nbsp;
+          =link_to "(253) 572-2842", "tel:253-572-2842"
+      %div{class: "row"}
+        %p{class: "pull-right"}
+          =link_to "http://twitter.com/akpaceskindoc" do
+            =image_tag "twitter.png"
+          =link_to "http://facebook.com/pacedermatology" do
+            =image_tag "facebook.png"
+          =link_to "http://youtube.com/pacedermatology" do
+            =image_tag "youtube.png"
+          =link_to feeds_path do
+            =image_tag "rss.png"
+        %p
+          =link_to root_path do
+            =image_tag "logo.png"
+      %div{class: "row"}
+        %div{class: "navbar navbar-inverse"}
+          %div{class: "navbar-inner"}
+            %ul{class: "nav"}
+              %li
+                =link_to "Home", root_path
+              %li{class: "dropdown"}
+                %a{href: "#", class: "dropdown-toggle", "data-toggle" => "dropdown"}
+                  About
+                  %b{class: "caret"}
+                %ul{class: "dropdown-menu"}
+                  %li
+                    =link_to "Mission", root_path
+                  %li
+                    =link_to "The Associates", root_path
+                  %li
+                    =link_to "The Providers", pages_about_path
+              %li
+                =link_to "Services", pages_services_path
+              %li
+                =link_to "Art", pages_art_path
+              %li
+                =link_to "Blog", blogs_path
+              %li
+                =link_to "Contact", pages_contact_path
+              %li
+                =link_to "Patients", pages_art_path
+              %li
+                =link_to "Resources", blogs_path
+              %li
+                =link_to "Products", pages_contact_path
+      =yield
+    =javascript_include_tag "http://code.jquery.com/jquery.js"
+    =javascript_include_tag "application"

@@ -1,4 +1,14 @@
 Pacedermatology::Application.routes.draw do
+  
+  get "pages/about"
+  get "pages/contact"
+  get "pages/art"
+  get "pages/services"
+  get "pages/contact"
+
+  resources "feeds"
+  resources "blogs"
+  root to: "pages#home"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
