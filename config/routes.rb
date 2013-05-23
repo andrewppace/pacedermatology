@@ -1,5 +1,8 @@
 Pacedermatology::Application.routes.draw do
   
+  resources :blogs
+
+
   get "services/medical"
   get "services/surgical"
   get "services/cosmetic"

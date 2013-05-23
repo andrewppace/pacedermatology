@@ -30,9 +30,20 @@
       =link_to "Book an Appointment Today", "http://zocdoc.com/practice/pace-dermatology-associates-11032", class: "btn btn-primary btn-large"
       =link_to "Learn More &raquo;".html_safe, root_path, class: "btn btn-large"
 %div{class: "row"}
-  %div{class: "span4"}
-    %h3 Current Specials
-  %div{class: "span4"}
-    %h3 Featured Product
-  %div{class: "span4"}
-    %h3 Featured Laser
+  %ul{class: "thumbnails"}
+    %li{class: "span4"}
+      %h3 Current Specials
+      %h5 Chemical Peels
+      %p
+        With summer approaching quickly, feel your best with our rejuvenating specials. We’ve taken $100 off the price of our chemical peels to help you take years off. This minimally-invasive procedure helps to correct pigmentary changes and skin laxity, leaving you with refreshed and healthier looking skin.
+      =link_to "learn more", root_path
+    %li{class: "span4"}
+      %h3 Featured Product
+      %h5 EltaMD Sun Care Products
+      =link_to "assets/eltamd.jpg", class: "thumbnail" do
+        =image_tag "eltamd.jpg", class: "img-rounded"
+      %p
+        We're all hoping for a great Washington summer. No time is more important than now to protect yourself from the sun. Save 15% on these great, broad-spectrum sunscreens.
+      =link_to "learn more", root_path
+    %li{class: "span4"}
+      %h3 Featured Laser
