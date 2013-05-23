@@ -5,75 +5,8 @@
     =stylesheet_link_tag "application"
   %body
     %div{class: "container"}
-      %div{class: "row"}
-        %p{class: "pull-right"}
-          Call us at
-          =link_to "(253) 572-2842", "tel:253-572-2842"
-          to 
-          =link_to "book an appointment", "http://zocdoc.com/practice/pace-dermatology-associates-11032"
-          today
-      %div{class: "row"}
-        %p{class: "pull-right"}
-          =link_to "http://twitter.com/akpaceskindoc" do
-            =image_tag "twitter.png"
-          =link_to "http://facebook.com/pacedermatology" do
-            =image_tag "facebook.png"
-          =link_to "http://youtube.com/pacedermatology" do
-            =image_tag "youtube.png"
-          =link_to feeds_path do
-            =image_tag "rss.png"
-        %p
-          =link_to root_path do
-            =image_tag "logo.png"
-      %div{class: "row"}
-        %div{class: "navbar navbar-inverse"}
-          %div{class: "navbar-inner"}
-            %ul{class: "nav"}
-              %li
-                =link_to "Home", root_path
-              %li{class: "dropdown"}
-                %a{href: "#", class: "dropdown-toggle", "data-toggle" => "dropdown"}
-                  About
-                  %b{class: "caret"}
-                %ul{class: "dropdown-menu"}
-                  %li
-                    =link_to "Our Mission", about_mission_path
-                  %li
-                    =link_to "Our Associates", about_associates_path
-                  %li
-                    =link_to "Our Providers", about_providers_path
-              %li{class: "dropdown"}
-                %a{href: "#", class: "dropdown-toggle", "data-toggle" => "dropdown"}
-                  Services
-                  %b{class: "caret"}
-                %ul{class: "dropdown-menu"}
-                  %li
-                    =link_to "Insurance Coverage", services_insurance_path
-                  %li
-                    =link_to "Medical", services_medical_path
-                  %li
-                    =link_to "Surgical", services_surgical_path
-                  %li
-                    =link_to "Cosmetic", services_cosmetic_path
-                  %li
-                    =link_to "Lasers", services_lasers_path
-              %li
-                =link_to "Art", pages_art_path
-              %li
-                =link_to "Blog", blogs_path
-              %li
-                =link_to "Contact", pages_contact_path
-              %li
-                =link_to "Patients", pages_art_path
-              %li
-                =link_to "Resources", blogs_path
-              %li
-                =link_to "Products", pages_contact_path
+      =render partial: "layouts/header"
       =yield
-      %div{class: "row"}
-        %div{class: "span4"}
-          %ul{class: "nav nav-list"}
-            %li{class: "nav-header"} 
-              About
+      =render partial: "layouts/footer"
     =javascript_include_tag "http://code.jquery.com/jquery.js"
     =javascript_include_tag "application"
