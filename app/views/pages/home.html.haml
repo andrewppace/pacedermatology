@@ -22,28 +22,33 @@
           %p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies        
     =link_to "&lsaquo;".html_safe, "#homeCarousel", class: "carousel-control left", "data-slide" => "prev"
     =link_to "&rsaquo;".html_safe, "#homeCarousel", class: "carousel-control right", "data-slide" => "next"
-%div{class: "row"}
-  %div{class: "hero-unit"}
-    %p
-      The premier source of medical, surgical, and aesthetic Dermatology in the Tacoma area.
-    %p
-      =link_to "Book an Appointment Today", "http://zocdoc.com/practice/pace-dermatology-associates-11032", class: "btn btn-primary btn-large"
-      =link_to "Learn More &raquo;".html_safe, root_path, class: "btn btn-large"
+
 %div{class: "row"}
   %ul{class: "thumbnails"}
+
     %li{class: "span4"}
-      %h3 Current Specials
+      %h3 Featured Treatment  
+      =link_to "assets/chemical-peel.jpg", class: "thumbnail" do
+        =image_tag "chemical-peel.jpg", class: "img-rounded"
       %h5 Chemical Peels
       %p
         With summer approaching quickly, feel your best with our rejuvenating specials. We’ve taken $100 off the price of our chemical peels to help you take years off. This minimally-invasive procedure helps to correct pigmentary changes and skin laxity, leaving you with refreshed and healthier looking skin.
-      =link_to "learn more", root_path
+      =link_to "Learn More &raquo;".html_safe, root_path, class: "btn btn-primary"
+
     %li{class: "span4"}
       %h3 Featured Product
-      %h5 EltaMD Sun Care Products
       =link_to "assets/eltamd.jpg", class: "thumbnail" do
         =image_tag "eltamd.jpg", class: "img-rounded"
+      %h5 EltaMD Sun Care Products
       %p
         We're all hoping for a great Washington summer. No time is more important than now to protect yourself from the sun. Save 15% on these great, broad-spectrum sunscreens.
-      =link_to "learn more", root_path
+      =link_to "Learn More &raquo;".html_safe, root_path, class: "btn btn-primary"
+
     %li{class: "span4"}
       %h3 Featured Laser
+      =link_to "assets/laser.jpg", class: "thumbnail" do
+        =image_tag "laser.jpg", class: "img-rounded"
+      %h5 IPL Rejuvenation
+      %p
+        Intense Pulsed Light will treat sun spots, photodamage, and redness.  This safe procedure has minimal recovery time and will help reverse years of sun damage and aging.  Schedule today and save $150.
+      =link_to "Learn More &raquo;".html_safe, root_path, class: "btn btn-primary"
