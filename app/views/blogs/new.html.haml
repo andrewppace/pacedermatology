@@ -5,7 +5,7 @@
     %div{class: "control-group"}
       %label{for: "author_id", class: "control-label"} Author
       %div{class: "controls"}
-        =select("post", "author_id", Author.all.map{|a| [a.name, a.id]}, {}, class: "span4")
+        =select("blog", "author_id", Author.all.map{|a| [a.name, a.id]}, {}, class: "span4")
     =render partial: "forms/text", locals: {object: @blog, method: "title", label: "Title"}
     =render partial: "forms/textarea", locals: {object: @blog, method: "body", label: "Body"}
 
