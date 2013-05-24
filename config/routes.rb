@@ -1,5 +1,7 @@
 Pacedermatology::Application.routes.draw do
   
+  get "shop/home"
+
   resources :blogs
 
 
@@ -8,11 +10,17 @@ Pacedermatology::Application.routes.draw do
   get "services/cosmetic"
   get "services/lasers"
   get "services/insurance"
+  get "services/nbuvb"
+  get "services/hair_removal"
+  get "services/ipl"
+  get "services/vein_removal"
 
   get "about/mission"
-  get "about/associates"
-  get "about/providers"
-
+  get "about/staff"
+  get "about/aaron_pace"
+  get "about/andrew_pace"
+  get "about/shelly_velickoff"  
+  
   get "pages/about"
   get "pages/contact"
   get "pages/art"
