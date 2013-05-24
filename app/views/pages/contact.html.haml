@@ -9,10 +9,25 @@
 
   %div
     %h4
-      Address
+      Our Address:
     %address
       Allenmore Medical Office Building B
       %br
       1901 South Union Ave., Suite B3003
       %br
       Tacoma, WA 98405
+      
+  %form{method: "post", action: contacters_path, class: "form-horizontal"}
+    %fieldset
+      %legend Create a blog
+
+      %div{class: "control-group"}
+        %label{for: "author_id", class: "control-label"} Author
+        %div{class: "controls"}
+          =select("blog", "author_id", Author.all.map{|a| [a.name, a.id]}, {}, class: "span4")
+      =render partial: "forms/text", locals: {object: @blog, method: "title", label: "Title"}
+      =render partial: "forms/textarea", locals: {object: @blog, method: "body", label: "Body"}
+
+      %div{class: "control-group"}
+        %div{class: "controls"}
+          %button{type: "submit", value: "Signup", class: "btn btn-primary"} Create

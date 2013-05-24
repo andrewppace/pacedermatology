@@ -2,8 +2,11 @@ Pacedermatology::Application.routes.draw do
   
   get "shop/home"
 
-  resources :blogs
+  match "contact" => "contactus#new"
+  match "contact/create" => "contactus#create"
 
+  resources :blogs
+  
 
   get "services/medical"
   get "services/surgical"

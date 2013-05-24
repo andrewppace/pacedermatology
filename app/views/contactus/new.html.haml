@@ -1,0 +1,26 @@
+%div{class: "row span12"}
+  %div
+    %h4
+      Our Office Numbers:
+    %p
+      Phone:  #{link_to "(253) 572-2842", "tel: (253) 572-2842"}
+      %br
+      Fax: (253) 572 2856
+  %div
+    %h4
+      Our Address:
+    %address
+      Allenmore Medical Office Building B
+      %br
+      1901 South Union Ave., Suite B3003
+      %br
+      Tacoma, WA 98405   
+  %form{method: "post", action: contact_create_path, class: "form-horizontal"}
+    %fieldset
+      %legend Send Us a Message
+      =render partial: "forms/text", locals: {object: @contacter, method: "name", label: "Your Name"}
+      =render partial: "forms/text", locals: {object: @contacter, method: "email", label: "Email"}
+      =render partial: "forms/textarea", locals: {object: @contacter, method: "content", label: "Message"}
+      %div{class: "control-group"}
+        %div{class: "controls"}
+          %button{type: "submit", value: "Signup", class: "btn btn-primary"} Send

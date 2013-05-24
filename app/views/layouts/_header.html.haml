@@ -6,15 +6,6 @@
     =link_to "book an appointment", "http://zocdoc.com/practice/pace-dermatology-associates-11032"
     today
 %div{class: "row"}
-  %p{class: "pull-right"}
-    =link_to "http://twitter.com/akpaceskindoc" do
-      =image_tag "twitter.png"
-    =link_to "http://facebook.com/pacedermatology" do
-      =image_tag "facebook.png"
-    =link_to "http://youtube.com/pacedermatology" do
-      =image_tag "youtube.png"
-    =link_to feeds_path do
-      =image_tag "rss.png"
   %p
     =link_to root_path do
       =image_tag "logo.png"
@@ -82,4 +73,4 @@
         %li
           =link_to "Blog", blogs_path
         %li
-          =link_to "Contact", pages_contact_path
+          =link_to "Contact", contact_path
