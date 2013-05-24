@@ -19,6 +19,7 @@ Pacedermatology::Application.routes.draw do
   get "services/vein_removal"
 
   get "about/mission"
+  get "about/privacy"
   get "about/staff"
   get "about/aaron_pace"
   get "about/andrew_pace"

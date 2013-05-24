@@ -1,8 +1,53 @@
 %div{class: "row"}
-  %div{class: "span4"}
+  %div{class: "span2 offset2"}
     %ul{class: "nav nav-list"}
       %li{class: "nav-header"} 
         About
+      %li
+        %small
+          =link_to "Aaron Pace, MD", about_aaron_pace_path, class: "muted"
+      %li
+        %small
+          =link_to "Andrew Pace, MD", about_andrew_pace_path, class: "muted"
+      %li
+        %small
+          =link_to "Shelly Velickoff, ARNP", about_andrew_pace_path, class: "muted"
+      %li
+        %small
+          =link_to "Our Staff", about_staff_path, class: "muted"
+      %li
+        %small
+          =link_to "Mission", about_mission_path, class: "muted"
+  %div{class: "span2"}
+    %ul{class: "nav nav-list"}
+      %li{class: "nav-header"} 
+        Patients
+      %li
+        %small
+          =link_to "Patient Login", "http://pace.nextechweb.com/patient", class: "muted"
+      %li
+        %small
+          =link_to "New Patient Login", "http://pace.nextechweb.com/patient/newuser", class: "muted"
+  %div{class: "span2"}
+    %ul{class: "nav nav-list"}
+      %li{class: "nav-header"} 
+        Legal
+      %li
+        %small
+          =link_to "Privacy Policy", about_privacy_path, class: "muted"
+  %div{class: "span2"}
+    %ul{class: "nav nav-list"}
+      %li{class: "nav-header"} 
+        Connect
+      %li
+        %small
+          =link_to "Facebook", "http://facebook.com/pacedermatology", class: "muted"
+      %li
+        %small
+          =link_to "Twitter", "http://twitter.com/akpaceskindoc", class: "muted"
+      %li
+        %small
+          =link_to "YouTube", "http://youtube.com/pacedermatology.com", class: "muted"
 %div{class: "row text-center"}
   %p
     =link_to "http://twitter.com/akpaceskindoc" do
@@ -13,3 +58,7 @@
       =image_tag "youtube.png"
     =link_to feeds_path do
       =image_tag "rss.png"
+%div{class: "row text-center"}
+  %p
+    %small{class: "muted"}
+      Pace Dermatology, PLLC &copy;
