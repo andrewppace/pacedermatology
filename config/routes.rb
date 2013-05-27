@@ -5,7 +5,7 @@ Pacedermatology::Application.routes.draw do
   match "contact" => "contactus#new"
   match "contact/create" => "contactus#create"
 
-  resources :blogs
+  resources :posts
   
 
   get "services/medical"

@@ -5,7 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+require 'yaml'
 Author.create({name: "Aaron Pace"})
 Author.create({name: "Andrew Pace"})
 Author.create({name: "Becky Coen"})
+
+
+YAML::load(File.open("/home/andrew/pacedermatology/db/wp_posts.yml")).each do |blog|
+  blog[:author_id] = Author.first.id
+  Post.create(blog)
+end
+

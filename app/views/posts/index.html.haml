@@ -1,0 +1,12 @@
+-@posts.each do |post|
+  %div
+    %h3
+      =post.title
+    %span
+      =post.created_at.strftime("%B %d, %Y")
+      by
+    %span
+      =post.author.name
+    %p
+      =post.synopsis.html_safe
+    =link_to "Edit", edit_post_path(post)
